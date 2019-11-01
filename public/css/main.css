@@ -70,7 +70,7 @@ span {
 }
 
 .btn {
-    padding: 20px;
+    padding: 30px;
 }
 
 .btn > a {
@@ -78,7 +78,7 @@ span {
     color: black;
     font-weight: bold;
     font-size: 1.25em;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 10px 20px;
     border: none;
     text-decoration: none;
@@ -87,4 +87,8 @@ span {
 
 .btn > a:hover {
     background-color: #00a343;
+}
+
+.hidden {
+    display: none;
 }
