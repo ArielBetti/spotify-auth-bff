@@ -14,7 +14,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '60e0a41416f9496893425e6561c0a035'; // Your client id
 var client_secret = '72efc03b003f4e5e910951c76d8ddbeb'; // Your secret
-var redirect_uri = 'http://localhost:8080/callback'; // Or Your redirect uri
+var redirect_uri = 'https://xpotify-auth.herokuapp.com/callback'; // Or Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
