@@ -14,7 +14,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '60e0a41416f9496893425e6561c0a035'; // Your client id
 var client_secret = '72efc03b003f4e5e910951c76d8ddbeb'; // Your secret
-var redirect_uri = 'https://xpotify-auth.herokuapp.com/'; // Or Your redirect uri
+var redirect_uri = 'https://xpotify-auth.herokuapp.com/callback'; // Or Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -48,7 +48,7 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email user-read-playback-state';
+  var scope = 'user-read-private user-read-email user-read-playback-state playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private streaming user-follow-modify user-follow-read user-library-read user-library-modify user-read-private user-read-birthdate user-read-email&state=34fFs29kd09&show_dialog=true';
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
