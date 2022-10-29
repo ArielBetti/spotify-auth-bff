@@ -1,7 +1,7 @@
 var querystring = require("querystring");
 var request = require("request"); // "Request" library
 var stateKey = "spotify_auth_state";
-var redirect_uri = process.env.REDIRECT_PROD;
+var redirect_uri = process.env.REDIRECT_URI;
 var client_id = process.env.CLIENT_ID;
 var client_secret = process.env.CLIENT_SECRET;
 
@@ -82,7 +82,7 @@ module.exports = (app) => {
             // we can also pass the token to the browser to make requests from there
             console.log(error, response, body);
             res.redirect(
-              `${process.env.LOADUSER_PROD}` +
+              `${process.env.REDIRECT_FRONT_END}` +
                 querystring.stringify({
                   token: access_token,
                   refresh_token: refresh_token,
